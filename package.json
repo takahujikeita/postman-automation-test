@@ -1,0 +1,27 @@
+{
+  "name": "postman-automation-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert": "node scripts/convert-and-upload.js",
+    "convert-openapi": "node scripts/convert-openapi.js",
+    "validate": "cat collections/combined-collection.json | python3 -m json.tool > /dev/null && echo 'Generated collection is valid JSON'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takahujikeita/postman-automation-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takahujikeita/postman-automation-test/issues"
+  },
+  "homepage": "https://github.com/takahujikeita/postman-automation-test#readme",
+  "devDependencies": {
+    "axios": "^1.12.1",
+    "openapi-to-postmanv2": "^5.1.0"
+  }
+}

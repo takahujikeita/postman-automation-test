@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: SaaSus Auth API
+  version: 1.0.0
+servers:
+  - url: https://api.saasus.io/v1/auth
+paths:
+  /userinfo:
+    get:
+      summary: Get User Info
+      parameters:
+        - name: token
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK

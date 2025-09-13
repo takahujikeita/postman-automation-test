@@ -1,0 +1,85 @@
+{
+  "item": [
+    {
+      "id": "dec8ba0c-0370-45c9-82b0-de7f4be898a6",
+      "name": "Get User Info",
+      "request": {
+        "name": "Get User Info",
+        "description": {},
+        "url": {
+          "path": [
+            "userinfo"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "token",
+              "value": "string",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c9c4f115-bb03-4990-816f-31302628c001",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "userinfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "string"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.saasus.io",
+      "type": "string"
+    }
+  ],
+  "info": {
+    "_postman_id": "6b165b02-4180-49bc-9288-57ffcff94e71",
+    "name": "SaaSus API Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Auto-generated from OpenAPI specification"
+  }
+}
