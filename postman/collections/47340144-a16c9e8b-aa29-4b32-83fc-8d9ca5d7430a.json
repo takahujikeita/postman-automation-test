@@ -81,7 +81,16 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/userinfo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"userinfo"
+							]
+						}
 					},
 					"response": []
 				}
