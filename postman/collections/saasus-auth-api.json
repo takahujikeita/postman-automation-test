@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "dec8ba0c-0370-45c9-82b0-de7f4be898a6",
+      "id": "c376f4b8-cc0a-42cb-9059-97a2d4a6e415",
       "name": "Get User Info",
       "request": {
         "name": "Get User Info",
@@ -23,12 +23,18 @@
           ],
           "variable": []
         },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
         "method": "GET",
         "auth": null
       },
       "response": [
         {
-          "id": "c9c4f115-bb03-4990-816f-31302628c001",
+          "id": "ea5414b7-cf73-4de6-aee7-32d3da384d8f",
           "name": "OK",
           "originalRequest": {
             "url": {
@@ -46,6 +52,12 @@
               ],
               "variable": []
             },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
             "method": "GET",
             "body": {}
           },
@@ -54,12 +66,99 @@
           "header": [
             {
               "key": "Content-Type",
-              "value": "text/plain"
+              "value": "application/json"
             }
           ],
-          "body": "",
+          "body": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"name\": \"string\"\n}",
           "cookie": [],
-          "_postman_previewlanguage": "text"
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1559769e-5cfd-4f17-9f3c-aa74fdee7ce0",
+      "name": "List Users",
+      "request": {
+        "name": "List Users",
+        "description": {},
+        "url": {
+          "path": [
+            "users"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "disabled": false,
+              "key": "offset",
+              "value": "0"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "8fcf2035-b16c-4f22-a885-ead82bff4501",
+          "name": "List of users",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"users\": [\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\"\n    }\n  ],\n  \"total\": 6041\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
         }
       ],
       "event": [],
