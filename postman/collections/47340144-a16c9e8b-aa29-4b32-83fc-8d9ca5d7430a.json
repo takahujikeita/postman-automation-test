@@ -72,6 +72,18 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "新規リクエスト",
+					"id": "47340144-9c177e2e-b7b4-4945-8889-930e0ef2905f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "47340144-8022ed7b-37dd-49d8-8b78-ee840c607762"
