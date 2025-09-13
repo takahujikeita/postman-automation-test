@@ -133,9 +133,11 @@ GitHub Actionsがリポジトリにプッシュできるよう、以下のいず
 2. **GitHub連携設定**:
    - PostmanでCollection → Integration → GitHub
    - リポジトリのmainブランチと`postman/collections/`ディレクトリを接続
+   - 詳細な設定手順は `POSTMAN_GITHUB_INTEGRATION.md` を参照
 
 3. **自動同期**:
    - PRがマージされると、Postmanのコレクションも自動更新
+   - OpenAPI更新 → GitHub Actions → GitHub merge → Postman同期の完全自動化
 
 ## 🚀 Postman APIアップロード（任意）
 
@@ -206,6 +208,7 @@ DEBUG=* npm run convert-openapi
 
 ### 🔗 関連ドキュメント
 
+- `POSTMAN_GITHUB_INTEGRATION.md` - **Postman GitHub連携設定ガイド（重要）**
 - `OPERATIONS_GUIDE.md` - 運用ガイドライン
 - `PRODUCTION_SUCCESS.md` - 本番動作確認結果
 - `TEST_RESULTS.md` - 詳細テスト結果

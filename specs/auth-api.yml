@@ -65,3 +65,38 @@ paths:
                           type: string
                   total:
                     type: integer
+  /profile:
+    get:
+      summary: Get User Profile
+      description: Retrieve detailed user profile information
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: User ID to retrieve profile for
+      responses:
+        '200':
+          description: User profile information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  email:
+                    type: string
+                  name:
+                    type: string
+                  profile:
+                    type: object
+                    properties:
+                      avatar_url:
+                        type: string
+                      bio:
+                        type: string
+                      created_at:
+                        type: string
+                        format: date-time
