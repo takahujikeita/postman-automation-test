@@ -100,3 +100,43 @@ paths:
                       created_at:
                         type: string
                         format: date-time
+  /logout:
+    post:
+      summary: User Logout
+      description: Logout user and invalidate session token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  description: User session token to invalidate
+              required:
+                - token
+      responses:
+        '200':
+          description: Successfully logged out
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Successfully logged out"
+                  logged_out_at:
+                    type: string
+                    format: date-time
+        '400':
+          description: Invalid token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid or expired token"
