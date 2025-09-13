@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "47340144-009537ff-6085-448d-b816-577a71c82ddd",
+		"name": "SaaSus Auth API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "userinfo",
+			"item": [
+				{
+					"name": "Get User Info",
+					"id": "47340144-5ad30a2e-2049-4ffd-addc-79fb00a60d3d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/userinfo?token=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"userinfo"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "string",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47340144-7c5b2a6b-864a-4a3f-b771-2705667c6de5",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userinfo?token=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userinfo"
+									],
+									"query": [
+										{
+											"description": "(Required) ",
+											"key": "token",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"name\": \"string\"\n}"
+						}
+					]
+				}
+			],
+			"id": "47340144-724ea85d-ba39-4a3f-8cf0-0cf915a16229"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "List Users",
+					"id": "47340144-f869bac3-911b-4d77-b2f4-b9bb1e940918",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?limit=10&offset=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47340144-1661cb2b-0b49-4b4e-b4e7-da860a57fc97",
+							"name": "List of users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?limit=10&offset=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"users\": [\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\"\n    }\n  ],\n  \"total\": 9549\n}"
+						}
+					]
+				}
+			],
+			"id": "47340144-ff7c3485-45e4-4292-a9fd-48b683008465"
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"id": "47340144-d575fa71-3f24-4bf7-875c-fb8220b83870",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/profile?user_id=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profile"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "string",
+									"description": "(Required) User ID to retrieve profile for"
+								}
+							]
+						},
+						"description": "Retrieve detailed user profile information"
+					},
+					"response": [
+						{
+							"id": "47340144-7642c3a8-8079-4bf5-b2c9-7e7f7ee0c985",
+							"name": "User profile information",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/profile?user_id=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profile"
+									],
+									"query": [
+										{
+											"description": "(Required) User ID to retrieve profile for",
+											"key": "user_id",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"name\": \"string\",\n  \"profile\": {\n    \"avatar_url\": \"string\",\n    \"bio\": \"string\",\n    \"created_at\": \"2003-09-20T14:03:54.129Z\"\n  }\n}"
+						}
+					]
+				}
+			],
+			"id": "47340144-9e6c4af1-44ee-4169-9af8-8e4716247a6a"
+		},
+		{
+			"name": "logout",
+			"item": [
+				{
+					"name": "User Logout",
+					"id": "47340144-7a7adbfb-d8d3-4eb1-9c0d-f32badcf623c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"token\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						},
+						"description": "Logout user and invalidate session token"
+					},
+					"response": [
+						{
+							"id": "47340144-81d4942d-9db0-48c8-8f82-befc36d507e2",
+							"name": "Successfully logged out",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"token\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"message\": \"Successfully logged out\",\n  \"logged_out_at\": \"1971-10-30T23:35:01.386Z\"\n}"
+						},
+						{
+							"id": "47340144-21346330-072a-4c6c-b453-f44d4023b2fb",
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"token\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"Invalid or expired token\"\n}"
+						}
+					]
+				}
+			],
+			"id": "47340144-719a67b6-8de1-4856-9101-739391bf18fc"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.saasus.io/v1/auth"
+		}
+	]
+}
