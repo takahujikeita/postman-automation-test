@@ -74,7 +74,7 @@
 					]
 				},
 				{
-					"name": "新規リクエスト",
+					"name": "Get Users",
 					"id": "47340144-9c177e2e-b7b4-4945-8889-930e0ef2905f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
